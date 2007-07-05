@@ -13,6 +13,7 @@ BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 2:2.10.7
 BuildRequires:	libmatchbox-devel >= 1.8
 BuildRequires:	openmoko-libs-devel
+Requires:	openmoko-icons
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define openmokoname %(echo %{name} | sed -e 's/openmoko-//')
