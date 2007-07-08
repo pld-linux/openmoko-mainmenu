@@ -1,5 +1,5 @@
-#
 Summary:	OpenMoko main menu applet
+Summary(pl.UTF-8):	Aplet głównego menu dla OpenMoko
 Name:		openmoko-mainmenu
 Version:	0.0.0.2352
 Release:	1
@@ -12,14 +12,16 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 2:2.10.7
 BuildRequires:	libmatchbox-devel >= 1.8
+BuildRequires:	libtool
 BuildRequires:	openmoko-libs-devel
 Requires:	openmoko-icons
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define openmokoname %(echo %{name} | sed -e 's/openmoko-//')
-
 %description
-OpenMoko main menu applet
+OpenMoko main menu applet.
+
+%description -l pl.UTF-8
+Aplet głównego menu dla OpenMoko.
 
 %prep
 %setup -q
@@ -45,8 +47,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/openmoko-mainmenu
-%{_desktopdir}/openmoko-mainmenu.desktop
 %dir %{_datadir}/openmoko-mainmenu
 %{_datadir}/openmoko-mainmenu/*.png
 %{_datadir}/openmoko-mainmenu/*.xpm
+%{_desktopdir}/openmoko-mainmenu.desktop
 %{_pixmapsdir}/openmoko-mainmenu.png
